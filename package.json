@@ -10,9 +10,7 @@
     "start-dev-hmr": "node_modules/.bin/webpack-dev-server --progress --inline --hot --open",
     "postinstall": "webpack -p",
     "start": "node server.js",
-    "build": "cross-env NODE_ENV=production node_modules/.bin/webpack -p",
-    "heroku-postbuild": "next build"
-  },
+    "build": "cross-env NODE_ENV=production node_modules/.bin/webpack -p"  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
