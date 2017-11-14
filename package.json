@@ -10,8 +10,9 @@
     "start-dev-hmr": "node_modules/.bin/webpack-dev-server --progress --inline --hot --open",
     "postinstall": "webpack -p",
     "start": "node server.js",
-    "build": "webpack --config webpack.conf.js",
-  "deploy": "npm run build"  },
+    "build": "cross-env NODE_ENV=production node_modules/.bin/webpack -p",
+    "heroku-postbuild": "next build"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -32,13 +33,13 @@
     "axios": "^0.16.2",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
-    "newrelic": "^2.3.2",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "react-sparklines": "^1.6.0",
     "redux": "^3.0.4",
-    "redux-promise": "^0.5.3"
+    "redux-promise": "^0.5.3",
+    "next": "2.0.0-beta.5"
   }
 }
