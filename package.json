@@ -9,8 +9,9 @@
     "start-dev": "npm run start-dev-hmr",
     "start-dev-hmr": "node_modules/.bin/webpack-dev-server --progress --inline --hot --open",
     "postinstall": "webpack -p",
-    "start": "node server.js"
-      },
+    "start": "node server.js",
+    "build": "webpack --config webpack.conf.js",
+  "deploy": "npm run build"  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
